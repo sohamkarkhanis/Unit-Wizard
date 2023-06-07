@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Soham Karkhanis" />
+		<style>
+			.author-info-container {
+				font-size: 14px;
+				color: #ffffff;
+				text-align: center;
+				margin-top: 20px;
+			}
+
+			.author-info-container p {
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="converter-wrapper-container">
+			<h1>Unit Wizard</h1>
+
+			<form name="property_form">
+				<span>
+					<select
+						class="select-property-container"
+						name="the_menu"
+						size="1"
+						onchange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)"
+					></select>
+				</span>
+			</form>
+
+			<div class="converter-side-a-container">
+				<form name="form_A" onsubmit="return false;">
+					<input
+						type="text"
+						class="numbersonly-input"
+						name="unit_input"
+						maxlength="20"
+						value="0"
+						onkeyup="CalculateUnit(document.form_A, document.form_B)"
+					/>
+					<span>
+						<select
+							name="unit_menu"
+							onchange="CalculateUnit(document.form_B, document.form_A)"
+						></select>
+					</span>
+				</form>
+			</div>
+			<!-- /converter-side-a-container -->
+
+			<div class="converter-equals-container">
+				<p>=</p>
+			</div>
+			<!-- /converter-equals-container -->
+
+			<div class="converter-side-b-container">
+				<form name="form_B" onsubmit="return false;">
+					<input
+						type="text"
+						class="numbersonly-input"
+						name="unit_input"
+						maxlength="20"
+						value="0"
+						onkeyup="CalculateUnit(document.form_B, document.form_A)"
+					/>
+					<span>
+						<select
+							name="unit_menu"
+							onchange="CalculateUnit(document.form_A, document.form_B)"
+						></select>
+					</span>
+				</form>
+			</div>
+			<!-- /converter-side-b-container -->
+
+			<div class="author-info-container">
+				<p>Author: Soham Karkhanis</p>
+				<a
+					href="https://www.youtube.com/watch?v=oHg5SJYRHA0"
+					class="project-link"
+					target="_blank"
+					>Click Here To View My Project On Github</a
+				>
+			</div>
+		</div>
+		<!-- /converter-wrapper-container -->
+
+		<script type="text/javascript" src="javascript.js"></script>
+	</body>
+</html>
