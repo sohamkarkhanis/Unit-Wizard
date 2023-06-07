@@ -2,6 +2,8 @@
 
 This repository contains source code for a simple unit converter webpage that allows users to convert between multiple units of various scientific properties. The webpage is implemented using the fundamentals of HTML, CSS, and JavaScript and provides a user-friendly interface for easy conversion.
 
+This webpage was developed as a project during my web development internship with Codeclause. This project not only allowed me to showcase my skills in HTML, CSS, and JavaScript but also provided valuable hands-on experience in web development. 
+
 ## Features
 
 - Conversion of units of various scientific properties:
